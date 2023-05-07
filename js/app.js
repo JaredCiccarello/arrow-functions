@@ -235,4 +235,4 @@ joe.scopeArrow();
 // Because scopeArrow is an arrow function, "this" refers to the global object. The arrow value is inheriting the "this" value from the global scope.
 
 // 3. Explain why "this" is different when an arrow function is used.
-// Arrow functions do not have object bindings. This refers to the class that Joe was built off of.
+// Arrow functions do not have object bindings. This refers to the class that Joe was built off of. 
