@@ -1,4 +1,8 @@
 'use strict';
+    // THIS A GUIDE! Add this as part of your regular examples.
+
+
+
 
 // STEP 1
 // This is a standard function expression. You may also be familiar with function declarations, which begin with the "function" keyword.
@@ -98,7 +102,7 @@ const newObject = array => ({
 });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
+// console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
 
 
 
@@ -172,39 +176,57 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 // console.log(message('Allie'));
 
 
-    let Student = function(name, age, hometown) {
-      this.name = name;
-      this.age = age;
-      this.hometown = hometown;
-    };
-
-    let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
-
-    // class Student (name, age, hometown) => ({
-    // this.name = name;
-    // this.age = age;
-    // this.hometown = hometown;
-    // });
+    // let Student = function(name, age, hometown) {
+    //   this.name = name;
+    //   this.age = age;
+    //   this.hometown = hometown;
+    // };
 
     // let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
 
+    // COMPLETE
+    class Student {
+       
+      constructor (name, age, hometown) {
+        this.name = name;
+        this.age = age;
+        this.hometown = hometown;
+      };
+    }
+      
+    let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-console.log(joe);
+// console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
-Student.prototype.greeting = function() {
+// Student.prototype.greeting = function() {
+//   return `Hi, my name is ${this.name}`;
+// };
+
+// COMPLETE
+Student.prototype.greeting = () => {
   return `Hi, my name is ${this.name}`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-console.log(joe.greeting());
+// console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
-Student.courseName = function() {
+
+
+
+// Student.courseName = function() {
+//   return 'This student is enrolled in Code 301.';
+// };
+
+
+  // COMPLETE
+Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
